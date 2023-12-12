@@ -1,0 +1,54 @@
+/*
+* {
+
+}
+*/
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+section {
+  background-color: lightgray;
+  padding: 25px;
+  
+}
+
+.menu {
+  background-color: bisque;
+  padding: 25px;
+}
+
+nav {
+  float: left;
+  width: 30%;
+
+  background-color: brown;
+}
+
+ul {
+  list-style-type: none;
+}
+
+article {
+  float: left;
+  width: 70%;
+  margin: 25px;
+  background-color: aquamarine;
+}
+
+img {
+  height: 70%;
+  width: 70%;
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+  padding: 10px;
+}

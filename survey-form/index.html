@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <form action="POST" id="survey-form">
+
+        <fieldset>
+            <label for="name" id="name-label">Name <input type="text" id="name" name="name-label" placeholder="Enter your name" required></label>
+            <label for="email" id="email-label">Email <input type="email" id="email" name="email-label" placeholder="Enter your Email" required></label>
+            <label for="number" id="number-label">Age <input type="number" id="number" name="number-label" placeholder="Age" min="10" max="100" required></label>
+        
+
+            <label for="dropdown">Which option best describes your current role?
+                <select name="dropdown" id="dropdown">
+                    <option value="#">Select current role</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full Time Job</option>
+                    <option value="3">Full Time Learner</option>
+                    <option value="4">Prefer no to say</option>
+                    <option value="5">Other</option>
+                </select>
+            </label>
+
+            <label for="friend">Would you recommend freeCodeCamp to a friend?
+                <label for="definitely"><input type="radio" name="friend" value="definitely">Definitely</label>
+                <label for="maybe"><input type="radio" name="friend" value="maybe">Maybe</label>
+                <label for="not-sure"><input type="radio" name="friend" value="not-sure">Not sure</label>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="improve">What would you like to see improved? (Check all that apply)
+                <label for="front"><input type="checkbox" name="improve" id="improve" value="front">Front-end Projects</label>
+                <label for="back"><input type="checkbox" name="improve" id="improve" value="back">Back-end Projects</label>
+                <label for="data"><input type="checkbox" name="improve" id="improve" value="data">Data Visualization</label>
+                <label for="challenges"><input type="checkbox" name="improve" id="improve" value="challenges">Challenges</label>
+                <label for="open-source"><input type="checkbox" name="improve" id="improve" value="open-source">Open Source Community</label>
+                <label for="help-rooms"><input type="checkbox" name="improve" id="improve" value="help-rooms">Gitter help rooms</label>
+                <label for="videos"><input type="checkbox" name="improve" id="improve" value="videos">Videos</label>
+                <label for="meetups"><input type="checkbox" name="improve" id="improve" value="meetups">City Meetups</label>
+                <label for="wiki"><input type="checkbox" name="improve" id="improve" value="wiki">Wiki</label>
+                <label for="forum"><input type="checkbox" name="improve" id="improve" value="forum">Forum</label>
+                <label for="additional-courses"><input type="checkbox" name="improve" id="improve" value="additional-courses">Additional Courses</label>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="comments">Any comments or suggestions?
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+            </label>
+        </fieldset>
+
+        <input type="submit" id="submit" value="Submit">
+
+    </form>
+</body>
+</html>

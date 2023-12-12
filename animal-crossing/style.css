@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "ac";
+    src: url("fonts/FinkHeavy.woff");
+    font-style: normal;
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: "date";
+    src: url("fonts/FOT-Seurat\ Pro\ B.otf");
+    font-style: normal;
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: "text";
+    src: url("fonts/FOT-RodinWanpaku\ Pro\ B.otf");
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  @-webkit-keyframes icon {
+    20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+  
+  @keyframes icon {
+    20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 80%;
+    font-family: "ac", sans-serif;
+    letter-spacing: 2px;
+    background-image: url("img/ac_background.png");
+    background-size: 25%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    backdrop-filter: blur(.5px);
+}
+
+header {
+    display: flex;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 3px 3px 3px #000;
+    color: #FEC938;
+    /* text-shadow: 5px 5px 0 #93631E,
+                -5px 5px 0 #93631E, 
+                5px -5px 0 #93631E, 
+               -5px -5px 0 #93631E,
+                   5px 0 0 #93631E,
+                  -5px 0 0 #93631E, 
+                  0 -5px 0 #93631E, 
+                   0 5px 0 #93631E; */
+    padding: 10px 30px;
+    margin: 50px auto 0;
+    /* background: linear-gradient(0deg, #9FD2C9, #fff); */
+    /* background-color: #93631E; */
+    /* border: 7px solid #FEC938; */
+    background: linear-gradient(0deg, #00000070, #00000070), url("img/ac_wood.png");
+    border-radius: 50px;
+    box-shadow: 0 0 20px #000;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+    min-width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logo,
+.empty {
+    width: 20%;
+    margin: 15px 20px -100px;
+    rotate: 5deg;
+    position: relative;
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.month-name {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.month-name p {
+    padding: 10px 30px;    
+    font-size: 2rem;
+    text-shadow: 3px 3px 3px #000;
+    color: #FEC938;
+    background: linear-gradient(0deg, #00000070, #00000070), url("img/ac_wood.png");
+    border-radius: 50px;
+    box-shadow: 0 0 20px #000;
+}
+
+.month {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.photo {
+    background: linear-gradient(0deg, #00000070, #00000070), url("img/ac_wood.png");
+    background-size: 100%;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px #000;
+    position: relative;
+    margin: 30px 0px;
+}
+
+.date {
+    margin-top: 0px;
+}
+
+.date p {
+    font-family: "date", sans-serif;
+    color: #FBFEE9;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+.text {
+    font-family: "text", sans-serif;
+    color: #FBFEE9;
+    text-align: center;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+icon {
+    position: absolute;
+    z-index: 1;
+}
+
+icon:hover {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: icon;
+    animation-name: icon;
+    animation-duration: 1s;
+    cursor: url("/img/ac_cursor.png"), auto;
+}
+
+icon img  {
+    width: 100px;
+}
+
+.top-left {
+    top: -30px;
+    left: -30px;
+}
+
+.top-right {
+    top: -30px;
+    right: -30px;
+}
+
+.bottom-left {
+    bottom: -30px;
+    left: -30px;
+}
+
+.bottom-right {
+    bottom: -30px;
+    right: -30px;
+}
+
+.present {
+    background-image: url(img/icons/present.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.present:hover {
+    background-image: url(img/icons/present.gif);
+}
+
+.no-photo {
+    width: 285px;
+    height: 300px;
+    text-align: center;
+}
+
+.border img {
+    padding: 20px;
+    padding-bottom: 0;
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 40px;
+    /* width: 50%;
+    -webkit-border-image: url(img/ac_wood.png) 1; */
+    filter: drop-shadow(5px 5px 5px);
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+}
+
+.border img:hover {
+    transform: scale(2);
+    cursor: url("/img/ac_cursor.png"), auto;
+    position: relative;
+    z-index: 2;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ label img {
+    transform: scale(3);
+    position: relative;
+    z-index: 2;
+}
+
+.last:hover {
+    cursor: pointer;
+}
+
+.no-hover {
+    pointer-events: none;
+}
+
+footer {
+    font-size: 45px;
+    color: #FEC938;
+    /* text-shadow: 5px 5px 0 #93631E,
+                -5px 5px 0 #93631E, 
+                5px -5px 0 #93631E, 
+               -5px -5px 0 #93631E,
+                   5px 0 0 #93631E,
+                  -5px 0 0 #93631E, 
+                  0 -5px 0 #93631E, 
+                   0 5px 0 #93631E; */
+    width: 80vw;
+    height: 100px;
+    padding: 10px auto;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(0deg, #9FD2C9, #fff); */
+    /* background-color: #93631E; */
+    /* border: 7px solid #FEC938; */
+
+    border-radius: 50px;
+    position: sticky;
+    bottom: 0;
+}

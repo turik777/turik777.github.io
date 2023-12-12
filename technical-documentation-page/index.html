@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#What_is_CSS?" class="nav-link">What is CSS?</a>
+        <a href="#CSS_syntax" class="nav-link">CSS syntax</a>
+        <a href="#CSS_modules" class="nav-link">CSS modules</a>
+        <a href="#CSS_selectors" class="nav-link">CSS selectors</a>
+        <a href="#What_is_a_selector?" class="nav-link">What is a selector?</a>
+        <a href="#Selector_lists" class="nav-link">Selector lists</a>
+        <a href="#Attribute_selectors" class="nav-link">Attribute selectors</a>
+        <a href="#Presence_and_value_selectors" class="nav-link">Presence and value selectors</a>
+        <a href="#Substring_matching_selectors" class="nav-link">Substring matching selectors</a>
+        <a href="#Case-sensitivity" class="nav-link">Case-sensitivity</a>
+        <a href="#Pseudo-classes_and_pseudo-elements" class="nav-link">Pseudo-classes and pseudo-elements</a>
+        <a href="#Simple_pseudo-class_example" class="nav-link">Simple pseudo-class example</a>
+        <a href="#User-action_pseudo_classes" class="nav-link">User-action pseudo classes</a>
+    </nav>
+
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+            <p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now CSS without a version number.</p>
+            <p>After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification and individual modules progress. CSS modules now have version numbers, or levels, such as CSS Color Module Level 5.</p>
+        </section>
+        <section id="What_is_CSS?" class="main-section">
+            <header>What is CSS?</header>
+            <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is with a simple syntax example and also covers some key terms about the language.</p>
+            <p>Headings will look larger than regular text, paragraphs break onto a new line and have space between them. Links are colored and underlined to distinguish them from the rest of the text. What you are seeing are the browser's default styles — very basic styles — that the browser applies to HTML to make sure that the page will be basically readable even if no explicit styling is specified by the author of the page.</p>
+            <p>However, the web would be a boring place if all websites looked like that. Using CSS, you can control exactly how HTML elements look in the browser, presenting your markup using whatever design you like.</p>
+        </section>
+        <section id="CSS_syntax" class="main-section">
+            <header>CSS syntax</header>
+            <p>CSS is a rule-based language — you define the rules by specifying groups of styles that should be applied to particular elements or groups of elements on your web page.</p>
+            <p>For example, you can decide to have the main heading on your page to be shown as large red text. The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+            <code>
+                h1 { <br>
+                &nbsp; color: red; <br>
+                &nbsp; font-size: 5em; <br>
+                }
+            </code>
+            <ul>
+                <li>In the above example, the CSS rule opens with a selector. This selects the HTML element that we are going to style. In this case, we are styling level one headings (h1).</li>
+                <li>We then have a set of curly braces { }.
+                </li>
+                <li>Inside the braces will be one or more declarations, which take the form of property and value pairs. We specify the property (color in the above example) before the colon, and we specify the value of the property after the colon (red in this example).</li>
+                <li>This example contains two declarations, one for color and the other for font-size. Each pair specifies a property of the element(s) we are selecting (h1 in this case), then a value that we'd like to give the property.</li>
+            </ul>
+            <p>CSS properties have different allowable values, depending on which property is being specified. In our example, we have the color property, which can take various color values. We also have the font-size property. This property can take various size units as a value.</p>
+            <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
+            <code>
+                h1 { <br>
+               &nbsp; color: red; <br>
+               &nbsp; font-size: 5em; <br>
+               }
+              <br><br>
+              p { <br>
+                &nbsp; color: black; <br>
+               }
+            </code>
+            <p>You will find that you quickly learn some values, whereas others you will need to look up. The individual property pages on MDN give you a quick way to look up properties and their values when you forget or when you want to know what else you can use as a value.</p>
+        </section>
+        <section id="CSS_modules" class="main-section">
+            <header>CSS modules</header>
+            <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN. Many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is and the properties and features it contains. In that module, you will also find a link to Specifications that defines the technology.</p>
+            <p>At this stage, you don't need to worry too much about how CSS is structured; however, it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things, and is therefore, probably in the same specification.</p>
+            <p>For a specific example, let's go back to the Backgrounds and Borders module — you might think that it makes logical sense for the background-color and border-color properties to be defined in this module. And you'd be right.</p>
+        </section>
+        <section id="CSS_selectors" class="main-section">
+            <header>CSS selectors</header>
+            <p>In CSS, selectors are used to target the HTML elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles we'll run through the different types in great detail, seeing how they work.</p>
+        </section>
+        <section id="What_is_a_selector?" class="main-section">
+            <header>What is a selector?</header>
+            <p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the subject of the selector.</p>
+            <p>In other articles you may have met some different selectors, and learned that there are selectors that target the document in different ways — for example by selecting an element such as h1, or a class such as .special.</p>
+            <p>In CSS, selectors are defined in the CSS Selectors specification; like any other part of CSS they need to have support in browsers for them to work. The majority of selectors that you will come across are defined in the Level 3 Selectors specification and Level 4 Selectors specification, which are both mature specifications, therefore you will find excellent browser support for these selectors.</p>
+        </section>
+        <section id="Selector_lists" class="main-section">
+            <header>Selector lists</header>
+            <p>If you have more than one thing which uses the same CSS then the individual selectors can be combined into a selector list so that the rule is applied to all of the individual selectors. For example, if I have the same CSS for an h1 and also a class of .special, I could write this as two separate rules.</p>
+            <code>
+                h1 { <br>
+                  &nbsp;  color: blue; <br>
+                  } <br>
+                   <br>
+                  .special { <br>
+                  &nbsp;  color: blue; <br>
+                  }
+            </code>
+            <p>I could also combine these into a selector list, by adding a comma between them.</p>
+            <code>
+                h1, .special {  <br>
+               &nbsp; color: blue; <br>
+              }
+              </code>
+              <p>White space is valid before or after the comma. You may also find the selectors more readable if each is on a new line.</p>
+              <code>
+                h1, <br>
+                .special { <br>
+                &nbsp;  color: blue; <br>
+                }
+                </code>
+                <p>In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.</p>
+                <p>When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.</p>
+                <p>In the following example, the invalid class selector rule will be ignored, whereas the h1 would still be styled.</p>
+                <code>
+                    h1 { <br>
+                  &nbsp;  color: blue; <br>
+                  } <br>
+                   <br>
+                  ..special { <br>
+                  &nbsp;  color: blue; <br>
+                  }
+                  </code>
+                <p>When combined however, neither the h1 nor the class will be styled as the entire rule is deemed invalid.</p>
+                <code>
+                    h1, ..special { <br>
+                   &nbsp; color: blue; <br>
+                  }
+                  </code>
+        </section>
+        <section id="Attribute_selectors" class="main-section">
+            <header>Attribute selectors</header>
+            <p>As you know from your study of HTML, elements can have attributes that give further detail about the element being marked up. In CSS you can use attribute selectors to target elements with certain attributes. This lesson will show you how to use these very useful selectors.
+            </p>
+        </section>
+        <section id="Presence_and_value_selectors" class="main-section">
+            <header>Presence and value selectors</header>
+            <p>These selectors enable the selection of an element based on the presence of an attribute alone (for example href), or on various different matches against the value of the attribute.</p>
+            <p>In the example below you can see these selectors being used.</p>
+            <ul>
+                <li>By using li[class] we can match any list item with a class attribute. This matches all of the list items except the first one.</li>
+                <li>li[class="a"] matches a selector with a class of a, but not a selector with a class of a with another space-separated class as part of the value. It selects the second list item.
+                </li>
+                <li>li[class~="a"] will match a class of a but also a value that contains the class of a as part of a whitespace-separated list. It selects the second and third list items.</li>
+            </ul>
+        </section>
+        <section id="Substring_matching_selectors" class="main-section">
+            <header>Substring matching selectors</header>
+            <p>These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of box-warning and box-error and wanted to match everything that started with the string "box-", you could use [class^="box-"] to select them both (or [class|="box"] as described in section above).</p>
+            <p>The next example shows usage of these selectors:</p>
+            <ul>
+                <li>li[class^="a"] matches any attribute value which starts with a, so matches the first two list items.</li>
+                <li>li[class$="a"] matches any attribute value that ends with a, so matches the first and third list item.</li>
+                <li>li[class*="a"] matches any attribute value where a appears anywhere in the string, so it matches all of our list items.</li>
+            </ul>
+        </section>
+        <section id="Case-sensitivity" class="main-section">
+            <header>Case-sensitivity</header>
+            <p>If you want to match attribute values case-insensitively you can use the value i before the closing bracket. This flag tells the browser to match ASCII characters case-insensitively. Without the flag the values will be matched according to the case-sensitivity of the document language — in HTML's case it will be case sensitive.</p>
+            <p>In the example below, the first selector will match a value that begins with a — it only matches the first list item because the other two list items start with an uppercase A. The second selector uses the case-insensitive flag and so matches all of the list items.</p>
+        </section>
+        <section id="Pseudo-classes_and_pseudo-elements" class="main-section">
+            <header>Pseudo-classes and pseudo-elements</header>
+            <p>The next set of selectors we will look at are referred to as pseudo-classes and pseudo-elements. There are a large number of these, and they often serve quite specific purposes. Once you know how to use them, you can look at the list to see if there is something which works for the task you are trying to achieve. Once again the relevant MDN page for each selector is helpful in explaining browser support.</p>
+        </section>
+        <section id="Simple_pseudo-class_example" class="main-section">
+            <header>Simple pseudo-class example</header>
+            <p>All pseudo-classes behave in this same kind of way. They target some bit of your document that is in a certain state, behaving as if you had added a class into your HTML. Take a look at some other examples on MDN:</p>
+            <ul>
+                <li>:last-child</li>
+                <li>:only-child</li>
+                <li>:invalid</li>
+            </ul>
+        </section>
+        <section id="User-action_pseudo_classes" class="main-section">
+            <header>User-action pseudo classes</header>
+            <p>Some pseudo-classes only apply when the user interacts with the document in some way. These user-action pseudo-classes, sometimes referred to as dynamic pseudo-classes, act as if a class had been added to the element when the user interacts with it. Examples include:</p>
+            <ul>
+                <li>:hover — mentioned above; this only applies if the user moves their pointer over an element, typically a link.</li>
+                <li>:focus — only applies if the user focuses the element by clicking or using keyboard controls.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
