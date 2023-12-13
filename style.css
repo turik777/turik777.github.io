@@ -1351,6 +1351,7 @@ body.dark button:hover .sun-light {
     body {
         height: 100%;
         overflow: scroll;
+        overflow-x: hidden;
     }
 
     .div3 {
@@ -1412,6 +1413,7 @@ body.dark button:hover .sun-light {
     .intro {
         position: relative;
         z-index: 1;
+        margin-right: 30px;
     }
 
     .social {
@@ -1497,28 +1499,79 @@ body.dark button:hover .sun-light {
 }
 
 
-@media (max-width: 1100px) and (min-width: 767px) {
+@media (max-width: 1200px) and (min-width: 767px) {
+    body {
+        /* height: 90vh; */
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
     .container {
-        display: none;
+        width: 1200px;
+        height: 800px;
+        -ms-grid-columns: 1fr 25px 1fr 25px 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        -ms-grid-rows: 1fr 25px 1fr 25px 1fr 25px 1fr 25px 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 25px 25px;
+        grid-template-areas:
+            "div1 div1 div1"
+            "div1 div1 div1"
+            "div2 div3 div4"
+            "div2 div3 div5"
+            "div2 div6 div7"
     }
 
-    .element {
-        height: 60vw;
-        width: 90vw;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        -webkit-animation: none;
-        animation: none;
+    .div1 {
+        height: 300px;
     }
 
-    .element:hover {
-        -webkit-box-shadow: none;
-        box-shadow: none;
+    .div3 {
+        -webkit-animation: appear 2s 1.6s backwards;
+        animation: appear 2s 1.6s backwards;
     }
 
-}
+    .div4 {
+        -webkit-animation: appear 2s 1.9s backwards;
+        animation: appear 2s 1.9s backwards;
+    }
 
-@media (min-width: 1100px) {
+    .div5 {
+        -webkit-animation: appear 2s 2.5s backwards;
+        animation: appear 2s 2.5s backwards;
+    }
+
+    .div6 {
+        -webkit-animation: appear 2s 2.2s backwards;
+        animation: appear 2s 2.2s backwards;
+    }
+
+    .div7 {
+        -webkit-animation: appear 2s 2.8s backwards;
+        animation: appear 2s 2.8s backwards;
+    }
+
+    .tech img {
+        width: 70px;
+    }
+
+    .projects a {
+        text-wrap: nowrap;
+        line-height: 21px;
+    }
+
+    button,
+    button:active {
+        top: -60px;
+    }
+
+    #time {
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
     .tablet {
         display: none;
     }
