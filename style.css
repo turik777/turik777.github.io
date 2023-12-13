@@ -813,7 +813,8 @@ button img {
     transition: 0.3s;
 }
 
-button:hover {
+button:hover,
+button:active {
     background-color: var(--light-element-color);
     border: 1px solid var(--light-hover-color);
 
